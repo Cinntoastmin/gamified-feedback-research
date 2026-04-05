@@ -7,5 +7,5 @@
     <label for="q1_03">TEST3</label><br>
     <input type="radio" id="q1_04">
     <label for="q1_04">TEST4</label><br>
-    <input type="btn" id="q1_submit">
+    <input type="submit" id="q1_submit">
 </form>

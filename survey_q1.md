@@ -1,4 +1,6 @@
-## Section 1: Coupling
+---
+title: Section 1: Coupling
+---
 In software engineering, coupling is a description of the extent to which disparate software modules depend on one another. Coupling is described as tight, high, or strong when modules are entirely dependent or mostly dependent on one another and loose, low, or weak when modules have few dependencies between them.
 
 As a concrete example, consider the following pseudocode class stub:

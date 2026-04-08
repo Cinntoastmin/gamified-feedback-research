@@ -31,12 +31,12 @@ This class is composed of many subparts, which are stored as references in the c
 
 <form id="survey_q1">
     <input type="radio" name="q1" required/>
-        <label>A <span style="font-family: 'Courier New', monospace;">Car</span>object creates its own <span style="font-family: 'Courier New', monospace;">Engine</span>on instantiation
+        <label>A <span style="font-family: 'Courier New', monospace;">Car</span> object creates its own <span style="font-family: 'Courier New', monospace;">Engine</span> on instantiation
         </label><br>
     <input type="radio" name="q1" required/>
-        <label>A <span style="font-family: 'Courier New', monospace;">NotificationService</span>is passed a <span style="font-family: 'Courier New', monospace;">TargetChannel</span>in its constructor. </label><br>
+        <label>A <span style="font-family: 'Courier New', monospace;">NotificationService</span> is passed a <span style="font-family: 'Courier New', monospace;">TargetChannel</span> in its constructor. </label><br>
     <input type="radio" name="q1" required/>
-        <label> The file path “log.txt” is set as a <span style="font-family: 'Courier New', monospace;">Logger</span>object's output location.</label><br>
+        <label> The file path “log.txt” is set as a <span style="font-family: 'Courier New', monospace;">Logger</span> object's output location.</label><br>
     <input type="radio" name="q1" required/>
-        <label> An <span style="font-family: 'Courier New', monospace;">AuthenticationService</span>instantiates an AES encryptor to secure their user’s plain text username and password on their end before transmitting them to the auth server. </label><br>
+        <label> An <span style="font-family: 'Courier New', monospace;">AuthenticationService</span> instantiates an AES encryptor to secure their user’s plain text username and password on their end before transmitting them to the auth server. </label><br>
 <form>

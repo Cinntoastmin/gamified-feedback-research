@@ -30,8 +30,29 @@ This class is composed of many subparts, which are stored as references in the c
 #### Which of the following relationships is **not** tightly coupled?
 
 <form id="survey_q1">
-    <input type="radio" name="q1" required/><label>A `Car` object creates its own `Engine` on instantiation</label><br>
-    <input type="radio" name="q1" required/><label>A `NotificationService object` is passed a `TargetChannel` in its constructor. </label><br>
-    <input type="radio" name="q1" required/><label> The file path “log.txt” is set as a `Logger` object's output location.</label><br>
-    <input type="radio" name="q1" required/><label> An `AuthenticationService` instantiates an AES encryptor to secure their user’s plain text username and password on their end before transmitting them to the auth server.</label><br>
+    <input type="radio" name="q1" required/>
+        <label>
+            A <p style="Font Family: Courier New">Car</p> object creates its own 
+            <p style="Font Family: Courier New">Engine</p> on instantiation
+        </label><br>
+    <input type="radio" name="q1" required/>
+        <label>
+            A <p style="Font Family: Courier New">NotificationServcie</p> 
+            is passed a <p style="Font Family: Courier New">TargetChannel</p> 
+            in its constructor. 
+        </label><br>
+    <input type="radio" name="q1" required/>
+        <label> 
+            The file path “log.txt” is set as a 
+            <p style="Font Family: Courier New">Logger</p> 
+            object's output location.
+        </label><br>
+    <input type="radio" name="q1" required/>
+        <label> 
+            An 
+            <p style="Font Family: Courier New">AuthenticationService</p> 
+            instantiates an AES encryptor to secure their user’s plain text
+            username and password on their end before transmitting them to
+            the auth server.
+        </label><br>
 <form>

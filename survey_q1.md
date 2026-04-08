@@ -1,5 +1,6 @@
 ---
 title: "Section 1: Coupling"
+description: "Programming is not like being in the CIA; you don't get credit for being sneaky. It's more like advertising; you get lots of credit for making your connections as blatant as possible. \n -Steve McConnell, \"Code Complete\""
 ---
 
 In software engineering, coupling is a description of the extent to which disparate software modules depend on one another. Coupling is described as tight, high, or strong when modules are entirely dependent or mostly dependent on one another and loose, low, or weak when modules have few dependencies between them.
@@ -8,7 +9,7 @@ As a concrete example, consider the following pseudocode class stub, assume anyt
 
 ```
 Class Car(){
-    
+
     // private member variable parts
 	private Dictionary parts{};
 

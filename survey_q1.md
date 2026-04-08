@@ -6,7 +6,9 @@ In software engineering, coupling is a description of the extent to which dispar
 
 As a concrete example, consider the following pseudocode class stub, assume anything relavent has been properly imported:
 
-`Class Car(){
+```
+Class Car(){
+    
     // private member variable parts
 	private Dictionary parts{};
 
@@ -17,6 +19,7 @@ As a concrete example, consider the following pseudocode class stub, assume anyt
 		self.parts[‘engine’] = myEngine;
 		// ...
     }
-}`
+}
+```
 
 This class is composed of many subparts, which are stored as references in the class’s member dictionary parts{}. In the constructor for the Car class, it creates an instance of the Engine class and places it in its parts{} dictionary, as every car needs an engine. In this implementation, the Engine is entirely reliant on the Car to exist and therefore tightly coupled. Now whenever the Engine class is altered, its connection with the Car class needs to be tested and preserved.

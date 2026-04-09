@@ -41,9 +41,9 @@ This class is composed of many subparts, which are stored as references in the c
     <input type="radio" name="q1" required/>
         <label> An <span style="font-family: 'Courier New', monospace;">AuthenticationService</span> instantiates an AES encryptor to secure their user’s plain text username and password on their end before transmitting them to the auth server. </label><br><br>
     <div class="range-container">
-        <span>0</span>
+        <label>How confident are you in your answer?</label><br>
+        <span>0 </span>
         <input type="range" name="q1_conf" min="1" max="10" required> 
-        <span>10</span>
-        <label>How confident are you in your answer?</label>
+        <span> 10</span>
     </div>
 <form>

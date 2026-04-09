@@ -1,5 +1,6 @@
 ---
 title: "Section 1: Coupling"
+
 description: "Programming is not like being in the CIA; you don't get credit for being sneaky. It's more like advertising; you get lots of credit for making your connections as blatant as possible. -Steve McConnell, \"Code Complete\""
 ---
 
@@ -23,7 +24,7 @@ Class Car(){
 }
 ```
 
-This class is composed of many subparts, which are stored as references in the class’s member dictionary parts{}. In the constructor for the Car class, it creates an instance of the Engine class and places it in its parts{} dictionary, as every car needs an engine. In this implementation, the Engine is entirely reliant on the Car to exist and therefore tightly coupled. Now whenever the Engine class is altered, its connection with the Car class needs to be tested and preserved.
+This class is composed of many subparts, which are stored as references in the class’s member dictionary <span style="font-family: 'Courier New', monospace;">parts{}</span>. In the constructor for the <span style="font-family: 'Courier New', monospace;">Car</span> class, it creates an instance of the <span style="font-family: 'Courier New', monospace;">Engine</span> class and places it in its <span style="font-family: 'Courier New', monospace;">parts{}</span> dictionary, as every car needs an engine. In this implementation, the <span style="font-family: 'Courier New', monospace;">Engine</span> is entirely reliant on the <span style="font-family: 'Courier New', monospace;">Car</span> to exist and therefore tightly coupled. Now whenever the <span style="font-family: 'Courier New', monospace;">Engine</span> class is altered, its connection with the Car class needs to be tested and preserved.
 
 ### Check In:
 
@@ -39,4 +40,5 @@ This class is composed of many subparts, which are stored as references in the c
         <label> The file path “log.txt” is set as a <span style="font-family: 'Courier New', monospace;">Logger</span> object's output location.</label><br>
     <input type="radio" name="q1" required/>
         <label> An <span style="font-family: 'Courier New', monospace;">AuthenticationService</span> instantiates an AES encryptor to secure their user’s plain text username and password on their end before transmitting them to the auth server. </label><br>
+    <input type="range" name="q1_conf" min="1" max="10" required> How confident are you in your answer?
 <form>

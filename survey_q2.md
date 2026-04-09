@@ -25,6 +25,11 @@ Introduced in the 2000 paper [Design Principles and Design Patterns](https://sta
     <input type="radio" name="q2" required/>
         <label>A <span style="font-family: 'Courier New', monospace;">PaymentProcessor</span> class contains a reference to a <span style="font-family: 'Courier New', monospace;">PaymentGateway</span> interface, allowing different gateway implementations at runtime.</label><br>
     <input type="radio" name="q2" required/>
-        <label>An <span style="font-family: 'Courier New', monospace;">Order</span> class encapsulates order data. It includes a method, <span style="font-family: 'Courier New', monospace;">calcTotal(),</span> that computes the order total based on line item, taxes, and discounts</label><br>
-    <input type="range" name="q2_conf" min="1" max="10" required> How confident are you in your answer?
+        <label>An <span style="font-family: 'Courier New', monospace;">Order</span> class encapsulates order data. It includes a method, <span style="font-family: 'Courier New', monospace;">calcTotal(),</span> that computes the order total based on line item, taxes, and discounts</label><br><br>
+    <div class="range-container">
+        <span>0</span>
+        <input type="range" name="q2_conf" min="1" max="10" required> 
+        <span>10</span>
+        <label>How confident are you in your answer?</label>
+    </div>
 <form>

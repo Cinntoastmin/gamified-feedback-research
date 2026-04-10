@@ -1,19 +1,23 @@
-import { OWNER, REPO, TOKEN, EXP_GRP_SIZE} from "./config.js";
+import { OWNER, REPO, TOKEN, WORKER_URL} from "./config.js";
 
-export async function assignConditionBalanced(){
-    const res = await fetch(
-        `https://api.github.com/repos/${OWNER}/${REPO}/issues?labels=experimental&state=all`,
-    {
-        headers: {
-            "Authorization": `token ${TOKEN}`,
-            "Accept": "application/vnd.github+json"
-        }
-    }
-    );
 
-    const issues = await res.json();
-    return issues.length < EXP_GRP_SIZE ? "experimental" : "control";
+export async function assignConditionBalanced() {
+  const res = await fetch(WORKER_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      action: "assign-condition",
+      owner: "cinntoastmin",
+      repo: "gamified-feedback-research"
+    })
+  });
+
+  const data = await res.json();
+  return data.condition;
 }
+
+
+
 
 export async function logResponse({
     pageNumber,
@@ -21,55 +25,32 @@ export async function logResponse({
     correctAnswer,
     confidence,
     isCorrect,
-    feedbackShown,
+    feedbackShown
 }) {
-    const uid = localStorage.getItem("participant_id")
-    const issueNum = await findParticipantIssue()
+    const participantId = localStorage.getItem("participant_id");
 
-    const body = 
-    `
-    ### Page ${pageNumber}
+    const comment = `
+        ### Page ${pageNumber}
 
-    Answer Given: ${givenAnswer}
-    Correct Answer: ${correctAnswer}
-    Correct: ${isCorrect}
-    Confidence: ${confidence}
-    Feedback Shown: ${feedbackShown}
-    timestamp: ${new Date().toISOString()}
-    `.trim();
+        Answer Given: ${givenAnswer}
+        Correct Answer: ${correctAnswer}
+        Correct: ${isCorrect}
+        Confidence: ${confidence}
+        Feedback Shown: ${feedbackShown}
+        Timestamp: ${new Date().toISOString()}
+        `.trim();
 
-    await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues/${issueNum}`,
-        {
-            method: "POST",
-            headers: {
-                "Authorization": `token ${TOKEN}`,
-                "Accept": "application/vnd.github+json"
-            },
-            body: JSON.stringify({ body })
-        }
-    );
-}
-
-async function findParticipantIssue(){
-    const pid = localStorage.getItem("participant_id");
-
-    const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues?state=all&per_page=10`,
-        {
-            headers: {
-                "Authorization": `token ${TOKEN}`,
-                "Accept": "application/vnd.github+json"
-            }
-        }
-    );
-
-    const issues = await res.json();
-    const issue = issues.find(i => i.title.includes(pid));
-
-    if (!issue) {
-        throw new Error("Participant issue not found!");
-    }
-
-    return issue.number;
+    await fetch(WORKER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            action: "add-comment",
+            owner: "cinntoastmin",
+            repo: "gamified-feedback-research",
+            participantId,
+            comment
+        })
+    });
 }
 
 export async function createParticipantIssue(condition){
@@ -77,25 +58,27 @@ export async function createParticipantIssue(condition){
 
     console.log(`Does pid match ${pid}`);
 
-    const rep = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`,
+    const rep = await fetch(
+        "https://survey-github-proxy.YOURNAME.workers.dev", 
         {
-            method: "POST",
-            headers: {
-                "Authorization": `token ${TOKEN}`,
-                "Accept": "application/vnd.github+json"
-            },
-            body: JSON.stringify({
-                title: `Participant: ${pid}`,
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            action: "create",
+            owner: "cinntoastmin",
+            repo: "gamified-feedback-research",
+            body: {
+                title: `Participant: ${participantId}`,
                 labels: [condition],
-                body: 
-                    `
-                    Participant ID: ${pid}
-                    Condition: ${condition}
-                    Initialized: ${new Date().toISOString()}
-                    `.trim()
-            })
-        }
-    );
+                body: `
+                Participant ID: ${participantId}
+                Condition: ${condition}
+                Initialized: ${new Date().toISOString()}
+                `.trim()
+            }
+        })
+    });
+
 
     console.log(rep.status);
 }

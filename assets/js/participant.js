@@ -1,16 +1,27 @@
 import { assignConditionBalanced, createParticipantIssue } from "./github.js";
 
-export async function initializeParticipant(){
-    if(!localStorage.getItem("participant_id")) {
-        const uuid = crypto.randomUUID();
-        localStorage.setItem("participant_id", uuid);
-        console.log(`participants uuid: ${uuid}`)
-    }
 
-    if(!localStorage.getItem("condition")) {
-        const condition = await assignConditionBalanced();
-        localStorage.setItem("condition", condition);
-        console.log(`participants condition: ${condition}`)
-        await createParticipantIssue(condition);
-    }
+export async function initializeParticipant() {
+  if (!localStorage.getItem("participant_id")) {
+    localStorage.setItem("participant_id", crypto.randomUUID());
+  }
+
+  if (!localStorage.getItem("condition")) {
+    const participantId = localStorage.getItem("participant_id");
+    const condition = await assignConditionBalanced();
+
+    localStorage.setItem("condition", condition);
+
+    await fetch(WORKER_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        action: "create-issue",
+        owner: "cinntoastmin",
+        repo: "gamified-feedback-research",
+        participantId,
+        condition
+      })
+    });
+  }
 }

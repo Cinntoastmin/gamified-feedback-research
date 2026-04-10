@@ -53,6 +53,6 @@ This class is composed of many subparts, which are stored as references in the c
 <form>
 
 <script type="module">
-    import "/assets/js/main.js";
+    import "{{ site.baseurl }}/assets/js/main.js";
 </script>
 </div>

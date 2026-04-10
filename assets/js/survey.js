@@ -9,12 +9,13 @@ export function answerHandler({
 }) {
     const isCorrect = givenAnswer === correctAnswer;
 
+    /**
     conditionalExpTrigger({
         isCorrect,
         pageNumber,
         givenAnswer,
         correctAnswer
-    });
+    });*/
 
     logResponse({
         pageNumber,

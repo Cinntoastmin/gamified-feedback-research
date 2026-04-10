@@ -68,20 +68,20 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function goToNextPage(pageNum) {
     if(pageNum < 6) {
-        window.location.href = `/survey_q${pageNum+1}.html`
+        window.location.href = `gamified-feedback-research/survey_q${pageNum+1}.md`
     } else {
-        window.location.href = "/thanks.html";
+        window.location.href = "gamified-feedback-research/survey_end.md";
     }
 }
 
 function accessAnswerKey(pageNumber){
     const ANSWER_KEY = {
-        1:"a",
-        2:"b",
-        3:"c",
-        4:"d",
-        5:"a",
-        6:"b"
+        1:"A",
+        2:"B",
+        3:"C",
+        4:"D",
+        5:"A",
+        6:"B"
     }
 
     return ANSWER_KEY[pageNumber];

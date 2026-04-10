@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("invalid data-page value");
         return;
     }
+    console.log(`Page number is valid: #${pageNumber}`)
 
     if(pageNumber === 1) {
         try {
@@ -68,9 +69,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function goToNextPage(pageNum) {
     if(pageNum < 6) {
-        window.location.href = `gamified-feedback-research/survey_q${pageNum+1}.md`
+        window.location.href = `gamified-feedback-research/survey_q${pageNum+1}.html`
     } else {
-        window.location.href = "gamified-feedback-research/survey_end.md";
+        window.location.href = "gamified-feedback-research/survey_end.html";
     }
 }
 

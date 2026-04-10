@@ -52,7 +52,7 @@ This class is composed of many subparts, which are stored as references in the c
         <button type="submit">Submit</button>
 <form>
 
-<script type="javascript">
+<script type="module">
     import "/assets/js/main.js";
 </script>
 </div>

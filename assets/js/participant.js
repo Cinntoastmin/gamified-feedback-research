@@ -1,4 +1,4 @@
-import { assignConditionBalanced, createParticipantIssue } from "./github";
+import { assignConditionBalanced, createParticipantIssue } from "./github.js";
 
 export async function initializeParticipant(){
     if(!localStorage.getItem("participant_id")) {

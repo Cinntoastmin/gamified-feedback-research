@@ -15,7 +15,7 @@ export async function assignConditionBalanced(){
     return issues.length < EXP_GRP_SIZE ? "experimental" : "control";
 }
 
-async function logResponse({
+export async function logResponse({
     pageNumber,
     givenAnswer,
     correctAnswer,

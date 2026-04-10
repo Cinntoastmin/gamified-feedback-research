@@ -1,8 +1,6 @@
 import { initializeParticipant } from "./participant.js"
 import { answerHandler } from "./survey.js";
 
-initializeParticipant();
-
 document.addEventListener("DOMContentLoaded", async () => {
     const root = document.querySelector("[data-page]")
 

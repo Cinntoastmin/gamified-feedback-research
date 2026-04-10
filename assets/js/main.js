@@ -1,5 +1,5 @@
 import { initializeParticipant } from "./participant.js"
-import { handleAnswer } from "./survey.js";
+import { answerHandler } from "./survey.js";
 
 initializeParticipant();
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const correctAnswer = accessAnswerKey(pageNumber)
 
-            await handleAnswer({
+            await answerHandler({
                 pageNumber,
                 givenAnswer,
                 correctAnswer,

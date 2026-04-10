@@ -1,4 +1,4 @@
-async function initializeParticipant(){
+export async function initializeParticipant(){
     if(!localStorage.getItem("participant_id")) {
         localStorage.setItem("participant_id", crypto.randomUUID());
     }

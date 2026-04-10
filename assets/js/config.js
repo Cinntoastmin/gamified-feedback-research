@@ -1,4 +1,4 @@
 export const OWNER = "Cinntoastmin";
 export const REPO = "gamified-feedback-research";
-export const TOKEN = "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";
+export const TOKEN = "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";
 export const EXP_GRP_SIZE = 8;

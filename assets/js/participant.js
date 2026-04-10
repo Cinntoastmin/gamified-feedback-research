@@ -1,4 +1,5 @@
-import { assignConditionBalanced, createParticipantIssue } from "./github.js";
+import { assignConditionBalanced } from "./github.js";
+import { WORKER_URL } from "./config.js";
 
 
 export async function initializeParticipant() {

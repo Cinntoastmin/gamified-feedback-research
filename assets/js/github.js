@@ -72,7 +72,7 @@ async function findParticipantIssue(){
     return issue.number;
 }
 
-async function createParticipantIssue(condition){
+export async function createParticipantIssue(condition){
     const pid = localStorage.getItem("participant_id");
 
     await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`,

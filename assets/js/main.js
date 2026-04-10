@@ -4,11 +4,11 @@ import { handleAnswer } from "./survey.js";
 initializeParticipant();
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const pageAttr = document.body.dataset.page;
+    const root = document.querySelector("[data-page]")
 
-    if(!pageAttr) return;
+    if(!root) return;
 
-    const pageNumber = Number(pageAttr)
+    const pageNumber = Number(root.dataset.page)
     if(Number.isNaN(pageNumber)) {
         console.error("invalid data-page value");
         return;

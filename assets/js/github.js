@@ -75,7 +75,9 @@ async function findParticipantIssue(){
 export async function createParticipantIssue(condition){
     const pid = localStorage.getItem("participant_id");
 
-    await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`,
+    console.log(`Does pid match ${pid}`);
+
+    const rep = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/issues`,
         {
             method: "POST",
             headers: {
@@ -94,4 +96,6 @@ export async function createParticipantIssue(condition){
             })
         }
     );
+
+    console.log(rep.status);
 }

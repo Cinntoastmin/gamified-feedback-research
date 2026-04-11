@@ -43,12 +43,12 @@ function expTrigger({
                 <p style="margin: 10px;">
                     you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
                 </p>
-                <p style="margin: 10px;">
+                <p style="margin: 10px;font-size: small;">
                     ${feedback}
                 </p>
-                <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
             </div>
         </div>
+        <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
     </div>
     `
     expContainer.hidden = false

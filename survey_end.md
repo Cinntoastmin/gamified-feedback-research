@@ -17,3 +17,5 @@ Please direct any questions to:
 - T.N., Primary Researcher: noniewiczt@easternct.edu
 - or
 - Dr. Garrett M. Dancik, Faculty Advisor: dancikg@easternct.edu
+
+#### Experimental Mascot courtesy of [catalyststuff]{https://www.freepik.com/author/catalyststuff}, Freepik.com

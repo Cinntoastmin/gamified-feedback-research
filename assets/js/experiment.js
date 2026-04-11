@@ -33,8 +33,9 @@ function expTrigger({
 
     expContainer.innerHTML = 
     `
-    <div class="tutorial-box">
+    <div class="tutorial-box" style="display: flex;">
         <div class="tutorial-avatar">
+            <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
         </div>
         <div class="tutorial-content">
             <p><strong>Let's Review.</strong></p>

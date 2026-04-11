@@ -36,10 +36,10 @@ function expTrigger({
     <div class="tutorial-box" style="display: flex; flex-direction: column;">
         <div class="tutorial-box" style="display: flex; flex-direction: row;">
             <div class="tutorial-avatar">
-                <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
+                <img src="/gamified-feedback-research/assets/png/exp-mascot.png" style="width:75%">
             </div>
             <div style="display: flex; flex-direction: column;">
-                <p style="font-size: x-large"><strong>Let's Review.</strong></p>
+                <p style="font-size: xx-large"><strong>Let's Review.</strong></p>
                 <p>
                     you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
                 </p>

@@ -50,9 +50,9 @@ This class is composed of many subparts, which are stored as references in the c
             <span> 10</span>
         </div>
         <button type="submit">Submit</button>
-<form>
+    <form>
+</div>
 
 <script type="module">
     import "{{ site.baseurl }}/assets/js/main.js";
 </script>
-</div>

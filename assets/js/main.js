@@ -50,14 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const correctAnswer = accessAnswerKey(pageNumber)
 
-            await answerHandler({
-                pageNumber,
-                givenAnswer,
-                correctAnswer,
-                confidence
-            });
-
-            const shouldDelay = conditionalExpTrigger({
+            const shouldDelay = await answerHandler({
                 pageNumber,
                 givenAnswer,
                 correctAnswer,

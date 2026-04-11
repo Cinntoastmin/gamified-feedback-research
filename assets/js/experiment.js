@@ -7,7 +7,7 @@ export function conditionalExpTrigger({
 }) {
     const condition = localStorage.getItem("condition");
 
-    if (!isCorrect || condition !== "experimental") {
+    if (isCorrect || condition !== "experimental") {
         return false;
     }
 

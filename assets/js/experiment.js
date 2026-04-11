@@ -43,7 +43,7 @@ function expTrigger({
                 <p style="margin: 10px;">
                     you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
                 </p>
-                <p style="margin: 10px;font-size: small;">
+                <p style="margin: 10px;">
                     ${feedback}
                 </p>
             </div>

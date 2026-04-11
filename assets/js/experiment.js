@@ -34,9 +34,9 @@ function expTrigger({
     expContainer.innerHTML = 
     `
     <div class="tutorial-box" style="display: flex; flex-direction: column;">
-        <div class="tutorial-box" style="display: flex; flex-direction: row;">
+        <div style="display: flex; flex-direction: row;">
             <div class="tutorial-avatar">
-                <img src="/gamified-feedback-research/assets/png/exp-mascot.png" style="width:75%">
+                <img src="/gamified-feedback-research/assets/png/exp-mascot.png" style="width:50%">
             </div>
             <div style="display: flex; flex-direction: column;">
                 <p style="font-size: xx-large"><strong>Let's Review.</strong></p>
@@ -46,7 +46,6 @@ function expTrigger({
             </div>
         </div>
         <div class="tutorial-content">
-            
             <p>
                 ${feedback}
             </p>

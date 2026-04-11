@@ -1,6 +1,13 @@
 import { initializeParticipant } from "./participant.js"
 import { answerHandler } from "./survey.js";
-import { conditionalExpTrigger } from "./experiment.js";
+
+function goToNextPage(pageNum) {
+    if(pageNum < 6) {
+        window.location.href = `/gamified-feedback-research/survey_q${pageNum+1}`
+    } else {
+        window.location.href = "/gamified-feedback-research/survey_end";
+    }
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
     const root = document.querySelector("[data-page]")
@@ -68,13 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 });
 
-function goToNextPage(pageNum) {
-    if(pageNum < 6) {
-        window.location.href = `/gamified-feedback-research/survey_q${pageNum+1}`
-    } else {
-        window.location.href = "/gamified-feedback-research/survey_end";
-    }
-}
+
 
 function accessAnswerKey(pageNumber){
     const ANSWER_KEY = {

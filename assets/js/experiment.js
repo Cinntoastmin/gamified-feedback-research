@@ -35,12 +35,11 @@ function expTrigger({
     `
     <div class="tutorial-box" style="display: flex; flex-direction: column;">
         <div style="display: flex; flex-direction: row;">
-            <div class="tutorial-avatar" style="width: 50%;">
-                <img src="/gamified-feedback-research/assets/png/exp-mascot.png" >
-            </div>
-            <div style="display: flex; flex-direction: column;" style="width: 50%;">
+            <div class="tutorial-avatar" style="width: 100%;">
+                <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
                 <p style="font-size: xx-large"><strong>Let's Review.</strong></p>
             </div>
+            
         </div>
         <div class="tutorial-content" style="display: flex; flex-direction: column;">
             <p style="margin: 10px;">

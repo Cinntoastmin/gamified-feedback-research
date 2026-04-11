@@ -13,7 +13,7 @@ The other common implementation is creating a setter which allows a dependency t
 
 #### Consider the following scenario:
 
-> You are a software developer creating an API to access a database. You’d like all API transactions to be logged. However, you do not want to commit to one logging solution. To be sure that your API has a logger while also being able to swap the logging solution, where should you add dependency injection?
+##### You are a software developer creating an API to access a database. You’d like all API transactions to be logged. However, you do not want to commit to one logging solution. To be sure that your API has a logger while also being able to swap the logging solution, where should you add dependency injection?
 
 <div id="survey-root" data-page="4">
     <form id="survey-form">

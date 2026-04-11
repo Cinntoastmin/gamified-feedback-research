@@ -36,11 +36,11 @@ This class is composed of many subparts, which are stored as references in the c
     <form id="survey-form">
         <input type="radio" name="answer" value="A" required/>
             <label>A <span style="font-family: 'Courier New', monospace;">Car</span> object creates its own <span style="font-family: 'Courier New', monospace;">Engine</span> on instantiation
-            </label><br>
+            </label><br><br>
         <input type="radio" name="answer" value="B" required/>
-            <label>A <span style="font-family: 'Courier New', monospace;">NotificationService</span> is passed a <span style="font-family: 'Courier New', monospace;">TargetChannel</span> in its constructor. </label><br>
+            <label>A <span style="font-family: 'Courier New', monospace;">NotificationService</span> is passed a <span style="font-family: 'Courier New', monospace;">TargetChannel</span> in its constructor. </label><br><br>
         <input type="radio" name="answer" value="C" required/>
-            <label> The file path “log.txt” is set as a <span style="font-family: 'Courier New', monospace;">Logger</span> object's output location.</label><br>
+            <label> The file path “log.txt” is set as a <span style="font-family: 'Courier New', monospace;">Logger</span> object's output location.</label><br><br>
         <input type="radio" name="answer" value="D" required/>
             <label> An <span style="font-family: 'Courier New', monospace;">AuthenticationService</span> instantiates an AES encryptor to secure their user’s plain text username and password on their end before transmitting them to the auth server. </label><br><br>
         <div class="range-container">

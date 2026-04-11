@@ -25,8 +25,8 @@ Runtime dependency errors come about as a direct result of the paradigm shift. T
 
 ### Check In:
 
-#### You are the senior developer on a SaaS project quickly increasing in scope. A team member suggests it's time to pay the tech debt and refactor the project to be more friendly for future development. What drawbacks would you want to consider if implementing dependency injection in your projec?
-
+#### You are the senior developer on a SaaS project quickly increasing in scope. A team member suggests it's time to pay the tech debt and refactor the project to be more friendly for future development. What drawbacks would you want to consider if implementing dependency injection in your project?
+<br>
 <div id="survey-root" data-page="6">
     <form id="survey-form">
         <input type="radio" name="answer" value="A" required/>

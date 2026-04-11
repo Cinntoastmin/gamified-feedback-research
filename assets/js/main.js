@@ -9,6 +9,18 @@ function goToNextPage(pageNum) {
     }
 }
 
+function accessAnswerKey(pageNumber){
+    const ANSWER_KEY = {
+        1:"B",
+        2:"A",
+        3:"C",
+        4:"A",
+        5:"B",
+        6:"B"
+    }
+    return ANSWER_KEY[pageNumber];
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     const root = document.querySelector("[data-page]")
 
@@ -62,7 +74,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 givenAnswer,
                 correctAnswer,
                 confidence,
-                goToNextPage
+                callback: () => goToNextPage(pageNumber)
             });
 
             if(!shouldDelay){ goToNextPage(pageNumber); }
@@ -74,18 +86,3 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
-
-
-
-function accessAnswerKey(pageNumber){
-    const ANSWER_KEY = {
-        1:"B",
-        2:"A",
-        3:"C",
-        4:"A",
-        5:"B",
-        6:"B"
-    }
-
-    return ANSWER_KEY[pageNumber];
-}

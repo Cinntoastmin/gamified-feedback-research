@@ -52,7 +52,7 @@ function expTrigger({
 
     document.getElementById("tutorial-continue").addEventListener("click", () => {
         expContainer.hidden=true;
-        callback(pageNumber);
+        callback();
     })
 }
 

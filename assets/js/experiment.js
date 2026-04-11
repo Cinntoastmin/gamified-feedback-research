@@ -42,9 +42,9 @@ function expTrigger({
                 you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
             </p>
             <p>
-                <code>${feedback}</code>
+                ${feedback}
             </p>
-            <button id="tutorial-continue"> Next Question</button>
+            <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
         </div>
     </div>
     `
@@ -52,15 +52,15 @@ function expTrigger({
 
     document.getElementById("tutorial-continue").addEventListener("click", () => {
         expContainer.hidden=true;
-        callback();
+        callback(pageNumber);
     })
 }
 
 const FEEDBACK_MATRIX = {
     "1":{
-        "A":"The Engine cannot be modified without potentially breaking its interaction with the Car Class.",
-        "C":"In this setup the destination for logs cannot be altered without breaking other hardcoded values.",
-        "D":"What happenes if AES gets cracked. A developer will need to alter the source code and confirm the switch to a different encryption service doesn't break the existing code."
+        "A":"This is a classic example of tight coupling. The Car class is directly responsible for creating a specific Engine implementation, which means: The Car cannot work with a different engine type without modification, Testing the Car in isolation becomes difficult, and Changes to the Engine construction logic force changes in Car.",
+        "C":"Hard-coding a configuration value like a file path tightly couples the logger to: a specific output medium and a specific environment or deployment setup. This reduces flexibility and makes it harder to: redirect logs elsewhere, reuse the logger in different context, and adjust behavior without chaning code.",
+        "D":"The AuthenticationService directly instantiating a specific encryption algorithm tightly couples it to: a single encryption strategy and a specific cryptographic implementation. As a result: changing the encryption method requires modifying the service, testing with alternate or mock encryption implementations are harder, the service takes on responsibility for encryption details."
     },
     "2":{
         "B":"Although this class supports multiple output formats (PDF, CSV, HTML), it still has one core responsibility: generating an end-of-day report. The different formats are simply different representations of the same report, not separate responsibilities. Under SRP, a class can have multiple methods as long as they all serve a single reason to change. In this case, the class would change only if the report generation requirements change, not because of unrelated business logic.",

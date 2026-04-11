@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                 givenAnswer,
                 correctAnswer,
                 confidence,
-                onConinue: () => goToNextPage(pageNumber)
+                goToNextPage
             });
 
             if(!shouldDelay){ goToNextPage(pageNumber); }

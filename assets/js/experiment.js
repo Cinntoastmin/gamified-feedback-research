@@ -35,18 +35,18 @@ function expTrigger({
     `
     <div class="tutorial-box" style="display: flex; flex-direction: column;">
         <div style="display: flex; flex-direction: row;">
-            <div class="tutorial-avatar" style="width:50%">
+            <div class="tutorial-avatar" style="width: 50%;">
                 <img src="/gamified-feedback-research/assets/png/exp-mascot.png" >
             </div>
-            <div style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: column;" style="width: 50%;">
                 <p style="font-size: xx-large"><strong>Let's Review.</strong></p>
-                <p>
-                    you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
-                </p>
             </div>
         </div>
-        <div class="tutorial-content">
-            <p>
+        <div class="tutorial-content" style="display: flex; flex-direction: column;">
+            <p style="margin: 10px;">
+                you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
+            </p>
+            <p style="margin: 10px;">
                 ${feedback}
             </p>
             <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>

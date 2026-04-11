@@ -34,7 +34,7 @@ Runtime dependency errors come about as a direct result of the paradigm shift. T
         <input type="radio" name="answer" value="B" required/>
             <label>With dependency injection constructor signatures bloat commensurate with amount of a classes required dependencies.</label><br><br>
         <input type="radio" name="answer" value="C" required/>
-            <label>Choosing dependency injection would break any currently mutable dependencies currently in your codebase.</label><br><br>
+            <label>Choosing dependency injection would break any currently mutable dependencies in your codebase.</label><br><br>
         <input type="radio" name="answer" value="D" required/>
             <label>Dependency injection will make testing more difficult, as the exact dependencies supplied at runtime will need to be supplied during testing.</label><br><br><br>
         <div class="range-container">
@@ -45,6 +45,7 @@ Runtime dependency errors come about as a direct result of the paradigm shift. T
         </div>
         <button type="submit">Submit</button>
     </form>
+    <div id="experimental-feedback" hidden></div>
 </div>
 
 <script type="module">

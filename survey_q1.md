@@ -51,7 +51,10 @@ This class is composed of many subparts, which are stored as references in the c
         </div>
         <button type="submit">Submit</button>
     </form>
+    <div id="experimental-feedback" hidden></div>
 </div>
+
+<div id="experimental-feedback" hidden></div>
 
 <script type="module">
     import "{{ site.baseurl }}/assets/js/main.js";

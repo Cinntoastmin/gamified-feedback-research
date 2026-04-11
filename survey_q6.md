@@ -30,13 +30,13 @@ Runtime dependency errors come about as a direct result of the paradigm shift. T
 <div id="survey-root" data-page="6">
     <form id="survey-form">
         <input type="radio" name="answer" value="A" required/>
-            <label>Introducing dependency injection will increase coupling across your project making it harder to maintain in the future</label><br><br>
+            <label>Introducing dependency injection will increase coupling across your project making it harder to maintain in the future.</label><br><br>
         <input type="radio" name="answer" value="B" required/>
-            <label>With dependency injection constructor signitures bloat commensurate with ammount of a classes required dependencies</label><br><br>
+            <label>With dependency injection constructor signatures bloat commensurate with amount of a classes required dependencies.</label><br><br>
         <input type="radio" name="answer" value="C" required/>
-            <label>choosing dependency injection would break any currently mutable dependencies currently in your codebase</label><br><br>
+            <label>Choosing dependency injection would break any currently mutable dependencies currently in your codebase.</label><br><br>
         <input type="radio" name="answer" value="D" required/>
-            <label>dependency injection will make testing more difficult, as the exact dependencies supplied at runtime will need to be supplied</label><br><br><br>
+            <label>Dependency injection will make testing more difficult, as the exact dependencies supplied at runtime will need to be supplied during testing.</label><br><br><br>
         <div class="range-container">
             <span>0</span>
             <input type="range" name="confidence" min="1" max="10" required> 
@@ -44,7 +44,7 @@ Runtime dependency errors come about as a direct result of the paradigm shift. T
             <label>How confident are you in your answer?</label>
         </div>
         <button type="submit">Submit</button>
-    <form>
+    </form>
 </div>
 
 <script type="module">

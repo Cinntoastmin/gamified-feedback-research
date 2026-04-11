@@ -36,7 +36,7 @@ The other common implementation is creating a setter which allows a dependency t
             <label>How confident are you in your answer?</label>
         </div>
         <button type="submit">Submit</button>
-    <form>
+    </form>
 </div>
 
 <script type="module">

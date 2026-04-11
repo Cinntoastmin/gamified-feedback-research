@@ -29,7 +29,7 @@ Take, for example, an application that relies on a database to store its data. W
             <label>How confident are you in your answer?</label>
         </div>
         <button type="submit">Submit</button>
-    <form>
+    </form>
 </div>
 
 <script type="module">

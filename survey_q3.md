@@ -31,13 +31,13 @@ In this new implementation the <span style="font-family: 'Courier New', monospac
 
 <div id="survey-root" data-page="3">
     <form id="survey-form">
-        <input type="radio" name="answer" required/>
+        <input type="radio" name="answer" value="A" required/>
             <label style="font-family: 'Courier New', monospace;">PaymentService(){self.processor = new AMXProcessor()}</label><br><br>
-        <input type="radio" name="answer" required/>
+        <input type="radio" name="answer" value="B" required/>
             <label style="font-family: 'Courier New', monospace;">PaymentService(Object processor){...}</label><br><br>
-        <input type="radio" name="answer" required/>
+        <input type="radio" name="answer" value="C" required/>
             <label style="font-family: 'Courier New', monospace;">PaymentService(ProcessorInterface processor){...}</label><br><br>
-        <input type="radio" name="answer" required/>
+        <input type="radio" name="answer" value="D" required/>
             <label style="font-family: 'Courier New', monospace;">PaymentService(AMXProcessorInterface processor){...}</label><br><br><br>
         <div class="range-container">
             <span>0</span>
@@ -46,7 +46,7 @@ In this new implementation the <span style="font-family: 'Courier New', monospac
             <label>How confident are you in your answer?</label>
         </div>
         <button type="submit">Submit</button>
-    <form>
+    </form>
 </div>
 
 <script type="module">

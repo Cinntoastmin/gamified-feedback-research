@@ -34,7 +34,7 @@ Introduced in the 2000 paper [Design Principles and Design Patterns](https://sta
             <label>How confident are you in your answer?</label>
         </div>
         <button type="submit">Submit</button>
-    <form>
+    </form>
 </div>
 
 <script type="module">

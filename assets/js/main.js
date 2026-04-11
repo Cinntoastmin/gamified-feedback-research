@@ -67,9 +67,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 function goToNextPage(pageNum) {
     if(pageNum < 6) {
-        window.location.href = `gamified-feedback-research/survey_q${pageNum+1}`
+        window.location.href = `/gamified-feedback-research/survey_q${pageNum+1}`
     } else {
-        window.location.href = "gamified-feedback-research/survey_end";
+        window.location.href = "/gamified-feedback-research/survey_end";
     }
 }
 

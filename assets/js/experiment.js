@@ -42,8 +42,10 @@ export function conditionalExpTrigger({
 
     let feedbackType;
 
-    if ( condition === "control") {
-        feedbackType = "CONTROL_INDICATOR";
+    if ( condition === "control" && isCorrect) {
+        feedbackType = "CONTROL_POSITIVE";
+    } else if (condition === "control" && !isCorrect) {
+        feedbackType = "CONTROL_NEGATIVE";
     } else if (condition === "experimental" && isCorrect) {
         feedbackType = "EXPERIMENTAL_POSITIVE";
     } else if (condition === "experimental" && !isCorrect) {
@@ -56,7 +58,7 @@ export function conditionalExpTrigger({
         correctAnswer,
         callback,
         feedbackType
-    })
+    });
     
     return false;
 }

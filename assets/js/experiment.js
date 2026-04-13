@@ -88,13 +88,15 @@ function serveFeedBack({
     } else if (feedbackType === "CONTROL_NEGATIVE") {
         expContainer.innerHTML = 
         `
-        <div style="background-color: #d90000;border-color: #333333;border-radius: 10%;border-width: 5px;>
-            <div style="display: flex;flex-direction: row">
-                <img src="/gamified-feedback-research/assets/png/cross_circles_negative.png">
-                <h2>Incorrect</h2>
+        <div id="pill-outer" style="background-color: #ff4949;border-color: #000000;margin-top: 5%;border-width: 10;">
+            <div style="position: relative;display: flex; flex-direction: row;align-items: center; padding: 5%;">
+                <div id="feedback-left" style="width: 15%; height: 15%; padding-right: 5%;">
+                    <img src="/gamified-feedback-research/assets/png/cross_circles_negative.png" alt="Incorrect Icon">
+                </div>
+                <span style="font-weight: bold; align-items: end; font-size: xx-large;text-align: right;">Incorrect</span>             
             </div>
         </div>
-        <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
+        <button id="tutorial-continue" style="width: 100%;height: 35px; margin-top: 5%;">Next Page</button>
         `;
     } else if (feedbackType === "EXPERIMENTAL_POSITIVE"){
         expContainer.innerHTML = 

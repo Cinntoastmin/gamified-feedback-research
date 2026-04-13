@@ -18,4 +18,4 @@ Please direct any questions to:
 - or
 - Dr. Garrett M. Dancik, Faculty Advisor: dancikg@easternct.edu
 
-#### Experimental Mascot courtesy of [catalyststuff]{https://www.freepik.com/author/catalyststuff}, Freepik.com
+#### Experimental Mascot courtesy of catalyststuff @https://www.freepik.com/author/catalyststuff, Freepik.com

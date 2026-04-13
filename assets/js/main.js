@@ -85,29 +85,4 @@ document.addEventListener("DOMContentLoaded", async () => {
             if(submitButton) submitButton.disabled = false;
         }
     });
-<<<<<<< HEAD
 });
-
-function goToNextPage(pageNum) {
-    if(pageNum < 6) {
-        window.location.href = `gamified-feedback-research/survey_q${pageNum+1}`
-    } else {
-        window.location.href = "gamified-feedback-research/survey_end";
-    }
-}
-
-function accessAnswerKey(pageNumber){
-    const ANSWER_KEY = {
-        1:"A",
-        2:"B",
-        3:"C",
-        4:"D",
-        5:"A",
-        6:"B"
-    }
-
-    return ANSWER_KEY[pageNumber];
-}
-=======
-});
->>>>>>> 9115fd326fac6bcc0b07eaa69128edab58563822

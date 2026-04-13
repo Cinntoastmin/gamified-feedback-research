@@ -76,8 +76,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 confidence,
                 callback: () => goToNextPage(pageNumber)
             });
-
-            if(!shouldDelay){ goToNextPage(pageNumber); }
             
         } catch (err) {
             console.error("Error Submitting response", err);

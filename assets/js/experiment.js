@@ -29,66 +29,7 @@ const FEEDBACK_MATRIX = {
         "C":"Dependency injection does not require dependencies to be immutable, nor does it inherently break mutable ones. Existing mutable dependencies can still be injected through constructors or setters without changing their mutability. Refactoring to DI may expose poor design choices, but that is a benefit—not a drawback—and does not mean DI itself breaks existing dependencies.",
         "D":"Dependency injection actually makes testing easier, not harder. By externalizing dependencies, tests can supply mock or fake implementations that are predictable and isolated from real systems."   
     }
-};
-
-const CONTROL_POSITIVE =
-    `
-    <div style="background-color: #82fa94;border-color: #333333;border-radius: 10%;border-width: 5px;>
-        <div style="display: flex;flex-direction: row">
-            <img src="/gamified-feedback-research/assets/png/check_mark_negative.png>
-            <h2>Correct.</h2>
-        </div>
-        <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
-    </div>
-    `;
-
-const CONTROL_NEGATIVE =
-    `
-    <div style="background-color: #d90000;border-color: #333333;border-radius: 10%;border-width: 5px;>
-        <div style="display: flex;flex-direction: row">
-            <img src="/gamified-feedback-research/assets/png/cross_circles_negative.png>
-            <h2>Incorrect</h2>
-        </div>
-        <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
-    </div>
-    `;
-
-const EXPERIMENTAL_POSITIVE=
-    `
-    <div class="tutorial-box" style="display: flex; flex-direction: column;">
-        <div style="display: flex; flex-direction: row;">
-            <div class="tutorial-avatar" style="width: 50%;">
-                <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
-            </div>
-            <div class="tutorial-content" style="display: flex; flex-direction: column;width: 50%">
-                <p style="font-size: xx-large"><strong>That Is Correct.</strong></p>
-            </div>
-        </div>
-        <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
-    </div>
-    `;
-
-const EXPERIMENTAL_NEGATIVE= 
-    `
-    <div class="tutorial-box" style="display: flex; flex-direction: column;">
-        <div style="display: flex; flex-direction: row;">
-            <div class="tutorial-avatar" style="width: 50%;">
-                <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
-            </div>
-            <div class="tutorial-content" style="display: flex; flex-direction: column;width: 50%">
-                <p style="font-size: xx-large"><strong>Let's Review.</strong></p>
-                <p style="margin: 10px;">
-                    you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
-                </p>
-                <p style="margin: 10px;">
-                    ${feedback}
-                </p>
-            </div>
-        </div>
-        <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
-    </div>
-    `;
-
+};  
 
 export function conditionalExpTrigger({
     isCorrect,
@@ -130,14 +71,64 @@ function serveFeedBack({
     const expContainer = document.getElementById("experimental-feedback");
 
     if (feedbackType === "CONTROL_POSITIVE"){
-        expContainer.innerHTML = CONTROL_POSITIVE;
+        expContainer.innerHTML = 
+        `
+        <div style="background-color: #82fa94;border-color: #333333;border-radius: 10%;border-width: 5px;>
+            <div style="display: flex;flex-direction: row">
+                <img src="/gamified-feedback-research/assets/png/check_mark_negative.png>
+                <h2>Correct.</h2>
+            </div>
+            <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
+        </div>
+        `;
     } else if (feedbackType === "CONTROL_NEGATIVE") {
-        expContainer.innerHTML = CONTROL_POSITIVE;
+        expContainer.innerHTML = 
+        `
+        <div style="background-color: #d90000;border-color: #333333;border-radius: 10%;border-width: 5px;>
+            <div style="display: flex;flex-direction: row">
+                <img src="/gamified-feedback-research/assets/png/cross_circles_negative.png>
+                <h2>Incorrect</h2>
+            </div>
+            <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
+        </div>
+        `;
     } else if (feedbackType === "EXPERIMENTAL_POSITIVE"){
-        expContainer.innerHTML = EXPERIMENTAL_POSITIVE;
+        expContainer.innerHTML = 
+        `
+        <div class="tutorial-box" style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row;">
+                <div class="tutorial-avatar" style="width: 50%;">
+                    <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
+                </div>
+                <div class="tutorial-content" style="display: flex; flex-direction: column;width: 50%">
+                    <p style="font-size: xx-large"><strong>That Is Correct.</strong></p>
+                </div>
+            </div>
+            <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
+        </div>
+        `;
     } else if (feedbackType === "EXPERIMENTAL_NEGATIVE"){
         const feedback = FEEDBACK_MATRIX?.[pageNumber]?.[givenAnswer];
-        expContainer.innerHTML = EXPERIMENTAL_NEGATIVE;
+        expContainer.innerHTML = 
+        `
+        <div class="tutorial-box" style="display: flex; flex-direction: column;">
+            <div style="display: flex; flex-direction: row;">
+                <div class="tutorial-avatar" style="width: 50%;">
+                    <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
+                </div>
+                <div class="tutorial-content" style="display: flex; flex-direction: column;width: 50%">
+                    <p style="font-size: xx-large"><strong>Let's Review.</strong></p>
+                    <p style="margin: 10px;">
+                        you selected <code>${givenAnswer}</code>, but the correct answer was <code>${correctAnswer}</code>.
+                    </p>
+                    <p style="margin: 10px;">
+                        ${feedback}
+                    </p>
+                </div>
+            </div>
+            <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
+        </div>
+        `;
     }
 
     expContainer.hidden = false

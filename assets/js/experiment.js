@@ -75,14 +75,12 @@ function serveFeedBack({
     if (feedbackType === "CONTROL_POSITIVE"){
         expContainer.innerHTML = 
         `
-        <div id="pill-outer" style="background-color: #82fa94;border-color: #000000;border-radius: 10%;border-width: 10px;>
-            <div style="position: relative;display: flex; flex-direction: row;align-items: center;">
+        <div id="pill-outer" style="background-color: #82fa94;border-color: #000000;border-radius: 10%;border-width: 10px;">
+            <div style="position: relative;display: flex; flex-direction: row;align-items: center; padding: 5%;">
                 <div id="feedback-left" style="width: 20%; height: 20%; padding-right: 5%;">
                     <img src="/gamified-feedback-research/assets/png/check_mark_negative.png" alt="Correct Icon">
                 </div>
-                <div id="feedback-right" style="display: flex;flex-direction: column;flex: 1;padding-left: 5%;">
-                    <h2>Correct</h2>
-                </div>                
+                <h2>Correct</h2>             
             </div>
         </div>
         <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>

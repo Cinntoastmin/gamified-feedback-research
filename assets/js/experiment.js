@@ -101,14 +101,12 @@ function serveFeedBack({
     } else if (feedbackType === "EXPERIMENTAL_POSITIVE"){
         expContainer.innerHTML = 
         `
-        <div class="tutorial-box" style="display: flex; flex-direction: column;">
-            <div style="display: flex; flex-direction: row;">
-                <div class="tutorial-avatar" style="width: 50%;">
-                    <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
-                </div>
-                <div class="tutorial-content" style="display: flex; flex-direction: column;width: 50%">
-                    <p style="font-size: xx-large"><strong>That Is Correct.</strong></p>
-                </div>
+        <div class="tutorial-box" style="display: flex; flex-direction: column;padding: 5%;">
+            <div class="tutorial-content" style="display: flex; flex-direction: column;width: 50%">
+                <p style="font-size: xx-large; font-weight: bold;">That Is Correct.</p>
+            </div>
+            <div class="tutorial-avatar" style="width: 50%; align-items: center;">
+                <img src="/gamified-feedback-research/assets/png/exp-mascot.png">
             </div>
             <button id="tutorial-continue" style="width: 100%;height: 50px;"> Next Question</button>
         </div>

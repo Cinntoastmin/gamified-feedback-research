@@ -109,10 +109,6 @@ export function conditionalExpTrigger({
         feedbackType = "EXPERIMENTAL_NEGATIVE";
     }
 
-    if (isCorrect || condition !== "experimental") {
-        return false;
-    }
-
     serveFeedBack({
         pageNumber,
         givenAnswer,
@@ -120,8 +116,8 @@ export function conditionalExpTrigger({
         callback,
         feedbackType
     })
-
-    return true;
+    
+    return false;
 }
 
 function serveFeedBack({

@@ -19,8 +19,6 @@ export function answerHandler({
         feedbackShown: !isCorrect && localStorage.getItem("condition") === "experimental"
     });
 
-    if(isCorrect) return false;
-
     return conditionalExpTrigger({
         isCorrect,
         pageNumber,

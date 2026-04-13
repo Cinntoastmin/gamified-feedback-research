@@ -1,6 +1,26 @@
 import { initializeParticipant } from "./participant.js"
 import { answerHandler } from "./survey.js";
 
+function goToNextPage(pageNum) {
+    if(pageNum < 6) {
+        window.location.href = `/gamified-feedback-research/survey_q${pageNum+1}`
+    } else {
+        window.location.href = "/gamified-feedback-research/survey_end";
+    }
+}
+
+function accessAnswerKey(pageNumber){
+    const ANSWER_KEY = {
+        1:"B",
+        2:"A",
+        3:"C",
+        4:"A",
+        5:"B",
+        6:"B"
+    }
+    return ANSWER_KEY[pageNumber];
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
     const root = document.querySelector("[data-page]")
 
@@ -49,20 +69,23 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const correctAnswer = accessAnswerKey(pageNumber)
 
-            await answerHandler({
+            const shouldDelay = await answerHandler({
                 pageNumber,
                 givenAnswer,
                 correctAnswer,
-                confidence
+                confidence,
+                callback: () => goToNextPage(pageNumber)
             });
 
-            goToNextPage(pageNumber);
+            if(!shouldDelay){ goToNextPage(pageNumber); }
+            
         } catch (err) {
             console.error("Error Submitting response", err);
             alert("Submission failed. please try again");
             if(submitButton) submitButton.disabled = false;
         }
     });
+<<<<<<< HEAD
 });
 
 function goToNextPage(pageNum) {
@@ -85,3 +108,6 @@ function accessAnswerKey(pageNumber){
 
     return ANSWER_KEY[pageNumber];
 }
+=======
+});
+>>>>>>> 9115fd326fac6bcc0b07eaa69128edab58563822

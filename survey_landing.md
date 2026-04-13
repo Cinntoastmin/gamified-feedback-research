@@ -13,4 +13,4 @@ there is no requirement that you finish the entire six part survey. Do as much a
 
 Once again thank you for your participation
 
-<a href="https://cinntoastmin.github.io/gamified-feedback-research/survey_q1"><button id="survey_start_button">Start the Survey</button></a>
+<a href="https://cinntoastmin.github.io/gamified-feedback-research/survey_q1"><button id="survey_start_button" style="width: 100%;height: 50px;">Start the Survey</button></a>

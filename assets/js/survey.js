@@ -5,17 +5,10 @@ export function answerHandler({
     pageNumber,
     givenAnswer,
     correctAnswer,
-    confidence
+    confidence,
+    callback
 }) {
     const isCorrect = givenAnswer === correctAnswer;
-
-    /**
-    conditionalExpTrigger({
-        isCorrect,
-        pageNumber,
-        givenAnswer,
-        correctAnswer
-    });*/
 
     logResponse({
         pageNumber,
@@ -24,5 +17,15 @@ export function answerHandler({
         confidence,
         isCorrect,
         feedbackShown: !isCorrect && localStorage.getItem("condition") === "experimental"
+    });
+
+    if(isCorrect) return false;
+
+    return conditionalExpTrigger({
+        isCorrect,
+        pageNumber,
+        givenAnswer,
+        correctAnswer,
+        callback
     });
 }

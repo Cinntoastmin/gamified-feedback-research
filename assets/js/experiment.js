@@ -76,9 +76,13 @@ function serveFeedBack({
         expContainer.innerHTML = 
         `
         <div style="background-color: #82fa94;border-color: #333333;border-radius: 10%;border-width: 5px;>
-            <div style="display: flex;flex-direction: row">
-                <img src="/gamified-feedback-research/assets/png/check_mark_negative.png">
-                <h2>Correct</h2>
+            <div style="position: relative;display: flex;align-items: center;">
+                <div id="feedback-left" style="width: 20%; height: 20%; padding-right: 5%;">
+                    <img src="/gamified-feedback-research/assets/png/check_mark_negative.png" alt="Correct Icon">
+                </div>
+                <div id="feedback-right" style="display: flex;flex-direction: column;flex: 1;padding-left: 5%;">
+                    <h2>Correct</h2>
+                </div>                
             </div>
         </div>
         <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>

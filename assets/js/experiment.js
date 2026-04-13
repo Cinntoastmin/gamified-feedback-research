@@ -80,7 +80,7 @@ function serveFeedBack({
                 <div id="feedback-left" style="width: 20%; height: 20%; padding-right: 5%;">
                     <img src="/gamified-feedback-research/assets/png/check_mark_negative.png" alt="Correct Icon">
                 </div>
-                <p style="width: 80%">Correct</p>             
+                <p style="width: 80%; font-size: 80%;">Correct</p>             
             </div>
         </div>
         <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>

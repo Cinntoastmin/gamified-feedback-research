@@ -77,22 +77,22 @@ function serveFeedBack({
         `
         <div style="background-color: #82fa94;border-color: #333333;border-radius: 10%;border-width: 5px;>
             <div style="display: flex;flex-direction: row">
-                <img src="/gamified-feedback-research/assets/png/check_mark_negative.png>
-                <h2>Correct.</h2>
+                <img src="/gamified-feedback-research/assets/png/check_mark_negative.png">
+                <h2>Correct</h2>
             </div>
-            <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
         </div>
+        <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
         `;
     } else if (feedbackType === "CONTROL_NEGATIVE") {
         expContainer.innerHTML = 
         `
         <div style="background-color: #d90000;border-color: #333333;border-radius: 10%;border-width: 5px;>
             <div style="display: flex;flex-direction: row">
-                <img src="/gamified-feedback-research/assets/png/cross_circles_negative.png>
+                <img src="/gamified-feedback-research/assets/png/cross_circles_negative.png">
                 <h2>Incorrect</h2>
             </div>
-            <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
         </div>
+        <button id="tutorial-continue" style="width: 100%;height: 35px">Next Page</button>
         `;
     } else if (feedbackType === "EXPERIMENTAL_POSITIVE"){
         expContainer.innerHTML = 
